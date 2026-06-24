@@ -1,0 +1,37 @@
+kind: CustomResourceDefinition
+apiVersion: apiextensions.k8s.io/v1
+metadata:
+  name: devopsbatches.vanshparate.com
+spec:
+  group: vanshparate.com
+  names: 
+    plural: devopsbatches
+    singular: devopsbatch
+    kind: DevOpsBatch
+    shortNames:
+      - batches
+      - tws
+  scope: Namespaced
+  versions:
+  - name: v1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties: 
+          spec:
+            type: object
+            properties: 
+              name:
+                type: string
+                description: "This is name of DevOps Batch"
+              duration: 
+                type: string
+                description: "This is duration of DevOps Batch"
+              mode:
+                type: string
+                description: "This is mode of batch eg. Live/Recorded"
+              platform:
+                type: string
+                description: "This is the platform of batch"  

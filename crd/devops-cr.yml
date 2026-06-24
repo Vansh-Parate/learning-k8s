@@ -1,0 +1,9 @@
+kind: DevOpsBatch
+apiVersion: vanshparate.com/v1
+metadata:
+  name: example-batch-2
+spec:
+  name: DevOps-2
+  duration: 7 months
+  platform: vanshparate.com
+  mode: Live
